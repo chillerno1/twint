@@ -63,7 +63,7 @@ def createIndex(config, instance, **scope):
                         "timezone": {"type": "keyword"},
                         "place": {"type": "keyword"},
                         "location": {"type": "keyword"},
-                        "tweet": {"type": "text"},
+                        "tweet": {"type": "text", "fields": {"raw": {"type": "keyword"}}},
                         "lang": {"type": "keyword"},
                         "hashtags": {"type": "keyword", "normalizer": "hashtag_normalizer"},
                         "cashtags": {"type": "keyword", "normalizer": "hashtag_normalizer"},
